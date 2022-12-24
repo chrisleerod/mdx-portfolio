@@ -17,25 +17,25 @@ function ProjectCard({ projects, background }) {
                 <Link href={`/projects/${project.slug}`}>
                     <Border
                         initial={{
-                            background: "linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0))",
+                            background: "linear-gradient(rgba(255, 255, 255, 0.2) -500%, rgba(255, 255, 255, 0))",
                             boxShadow: "0px 0px 0px rgba(0, 0, 0, 0.0)"
                         }}
                         whileHover={{
-                            background: "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05))",
+                            background: "linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05))",
                             boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
                             y: -2
                         }}
                         transition={{
-                            duration: 0.2
+                            duration: 0.3
                         }}
                     >
                         <CardContainer key={project.frontmatter.slug}
                             initial={{
-                                background: "radial-gradient(50% -100% at 50% 0%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%)",
-                                backgroundColor: "#1B1D1F"
+                                background: "radial-gradient(50% -100% at 50% 0%, rgba(19, 20, 21, 0) -200%, rgba(19, 20, 21, 0) 100%)",
+                                backgroundColor: "#141617"
                             }}
                             whileHover={{
-                                background: "radial-gradient(50% 100% at 50% 0%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%)", 
+                                background: "radial-gradient(50% 100% at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)", 
                                 backgroundColor: "#1B1D1F"
                             }}
                             transition={{
