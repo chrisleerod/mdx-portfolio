@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { projectsFileNames, projectsPath, blogsFileNames, blogsPath } from '../lib';
-import Nav from '../components/nav';
+import Nav from '../components/Nav';
 import Homepage from '../layouts/Homepage'
 
 export default function Home({ projects, blogs }) {
