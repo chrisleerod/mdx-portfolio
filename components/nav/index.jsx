@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import KeyButton from '../keyButton';
+import KeyButton from '../KeyButton';
 import { NavLinks } from './data/paths'
 import { useRouter } from 'next/router';
 

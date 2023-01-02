@@ -1,5 +1,5 @@
 import Divider from '../../components/Divider'
-import WorkGrid from '../../components/WorkGrid'
+import WorkGrid from '../../components/ProjectGrid'
 import BlogGrid from '../../components/BlogGrid'
 
 import {

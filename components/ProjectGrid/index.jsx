@@ -16,7 +16,9 @@ export default function WorkGrid({ projects }) {
                 </Title>
             </Header>
             <Grid>
-                <ProjectCard projects={projects} />
+                {projects.map((project, i) => (
+                    <ProjectCard key={i} project={project} projects={projects} />
+                ))}
             </Grid>
         </Container>
     )
