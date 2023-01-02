@@ -5,14 +5,14 @@ import {
     CardContainer,
     TextContainer,
     Title,
-    Timeline
+    Description,
+    Footer
 } from './index.styles'
 
-export default function ProjectCard({ projects }) {
+export default function BlogCard({ blog, i }) {
     return (
         <>
-            {projects.map((project, i) => (
-                <Link key={i} href={`/projects/${project.slug}`}>
+                <Link key={i} href={`/blogs/${blog.slug}`}>
                     <Border
                         initial={{
                             background: "linear-gradient(rgba(255, 255, 255, 0.2) -500%, rgba(255, 255, 255, 0))",
@@ -27,7 +27,7 @@ export default function ProjectCard({ projects }) {
                             duration: 0.3,
                         }}
                     >
-                        <CardContainer key={project.frontmatter.slug}
+                        <CardContainer key={blog.frontmatter.slug}
                             initial={{
                                 background: "radial-gradient(50% -100% at 50% 0%, rgba(19, 20, 21, 0) -200%, rgba(19, 20, 21, 0) 100%)",
                                 backgroundColor: "#181A1C"
@@ -42,13 +42,16 @@ export default function ProjectCard({ projects }) {
                             }}
                         >
                             <TextContainer>
-                                <Title>{project.frontmatter.title}</Title>
+                                <Title>{blog.frontmatter.title}</Title>
+                                <Description>{blog.frontmatter.description}</Description>
                             </TextContainer>
-                            <Timeline>{project.frontmatter.timeline}</Timeline>
                         </ CardContainer>
+                        <Footer>
+                            <span>{blog.frontmatter.postDate}</span>
+                            <span>{blog.frontmatter.type}</span>
+                        </Footer>
                     </Border>
                 </Link>
-            ))}
         </>
     )
 }

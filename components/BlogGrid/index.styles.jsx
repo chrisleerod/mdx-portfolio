@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    margin-bottom: 32px;
 `
 
 export const Header = styled.div`
@@ -17,8 +16,9 @@ export const Title = styled.h1`
 `
 
 export const Grid = styled.div`
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 8px;
+    gap: 16px;
 `

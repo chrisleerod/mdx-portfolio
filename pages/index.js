@@ -4,12 +4,12 @@ import styles from '../styles/Home.module.css'
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { projectsFileNames, projectsPath } from '../lib';
-import ProjectCard from '../components/ProjectCard';
+import { projectsFileNames, projectsPath, blogsFileNames, blogsPath } from '../lib';
+import BlogCard from '../components/BlogCard';
 import Nav from '../components/nav';
 import Homepage from '../layouts/Home'
 
-export default function Home({ projects }) {
+export default function Home({ projects, blogs }) {
   console.log(projects)
   return (
     <div className={styles.container}>
@@ -19,7 +19,10 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Homepage projects={projects} />
+      <Homepage
+        projects={projects}
+        blogs={blogs}
+      />
     </div>
   )
 }
@@ -33,9 +36,18 @@ export async function getStaticProps() {
       slug: slug.replace(/\.mdx?$/, ''),
     };
   });
+  const blogs = blogsFileNames.map((slug) => {
+    const content = fs.readFileSync(path.join(blogsPath, `${slug}`));
+    const { data } = matter(content);
+    return {
+      frontmatter: data,
+      slug: slug.replace(/\.mdx?$/, ''),
+    };
+  });
   return {
     props: {
-      projects: JSON.parse(JSON.stringify(projects))
+      projects: JSON.parse(JSON.stringify(projects)),
+      blogs: JSON.parse(JSON.stringify(blogs))
     },
   };
 }

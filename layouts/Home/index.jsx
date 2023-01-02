@@ -1,5 +1,6 @@
 import Divider from '../../components/Divider'
 import WorkGrid from '../../components/WorkGrid'
+import BlogGrid from '../../components/BlogGrid'
 
 import {
     Container,
@@ -12,7 +13,7 @@ import {
     IntroParagraph
 } from './index.styles'
 
-export default function Homepage({ projects }) {
+export default function Homepage({ projects, blogs }) {
     return (
         <Container>
             <IntroContainer>
@@ -38,6 +39,7 @@ export default function Homepage({ projects }) {
             <Divider />
             <BodyContainer>
                 <WorkGrid projects={projects} />
+                <BlogGrid blogs={blogs} />
             </BodyContainer>
             <Divider />
         </Container>
