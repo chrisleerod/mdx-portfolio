@@ -1,4 +1,3 @@
-import { redirect } from 'next/dist/server/api-utils'
 import Link from 'next/link'
 
 import {
@@ -10,11 +9,11 @@ import {
     Tag
 } from './index.styles'
 
-function ProjectCard({ projects, background }) {
+export default function ProjectCard({ projects }) {
     return (
         <>
-            {projects.map((project) => (
-                <Link href={`/projects/${project.slug}`}>
+            {projects.map((project, i) => (
+                <Link key={i} href={`/projects/${project.slug}`}>
                     <Border
                         initial={{
                             background: "linear-gradient(rgba(255, 255, 255, 0.2) -500%, rgba(255, 255, 255, 0))",
@@ -26,17 +25,17 @@ function ProjectCard({ projects, background }) {
                             y: -2
                         }}
                         transition={{
-                            duration: 0.3
+                            duration: 0.3,
                         }}
                     >
                         <CardContainer key={project.frontmatter.slug}
                             initial={{
                                 background: "radial-gradient(50% -100% at 50% 0%, rgba(19, 20, 21, 0) -200%, rgba(19, 20, 21, 0) 100%)",
-                                backgroundColor: "#141617"
+                                backgroundColor: "#181A1C"
                             }}
                             whileHover={{
                                 background: "radial-gradient(50% 100% at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)", 
-                                backgroundColor: "#1B1D1F"
+                                backgroundColor: "#181A1C"
                             }}
                             transition={{
                                 duration: 0.5,
@@ -51,9 +50,7 @@ function ProjectCard({ projects, background }) {
                         </ CardContainer>
                     </Border>
                 </Link>
-            ))}
+                ))}
         </>
     )
 }
-
-export default ProjectCard

@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const Border = styled(motion.div)`
-    margin-bottom: 8px;
     max-width: 800px;
     border-radius: 8px;
     padding: 1px;
+    cursor: pointer;
 `;
 
 export const CardContainer = styled(motion.div)`
