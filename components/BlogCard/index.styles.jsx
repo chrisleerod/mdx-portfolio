@@ -36,7 +36,7 @@ export const Title = styled.h1`
 `
 
 export const Description = styled.p`
-    max-width: 320px;
+    max-width: 300px;
     font-size: 14px;
     color: #CBCBD8;
     font-weight: 400;
