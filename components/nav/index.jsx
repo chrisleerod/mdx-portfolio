@@ -27,7 +27,7 @@ export default function Nav({ }) {
             <NavItems>
                 {NavLinks.map((link, i) => {
                     return (
-                        <li>
+                        <li key={i}>
                             <Link href={link.path}>
                                 <a className={currentRoute === link.path ? 'active' : 'default'}>
                                     {link.name}

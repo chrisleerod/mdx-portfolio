@@ -17,7 +17,7 @@ export default function WorkGrid({ blogs }) {
             </Header>
             <Grid>
                 {blogs.slice(0, 2).map((blog, i) => (
-                    <BlogCard blog={blog} i={i} blogs={blogs} />
+                    <BlogCard blog={blog} key={i} blogs={blogs} />
                 ))}
             </Grid>
         </Container>
