@@ -7,6 +7,21 @@ import {
     Timeline
 } from './index.styles'
 
+const border = {
+    initial: {
+        background: "linear-gradient(rgba(255, 255, 255, 0.2) -500%, rgba(255, 255, 255, 0))",
+        boxShadow: "0px 0px 0px rgba(0, 0, 0, 0.0)"
+    },
+    whileHover: {
+        background: "linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05))",
+        boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
+        y: -2
+    },
+    transition: {
+        duration: 0.3,
+    }
+}
+
 export default function ProjectCard({ project, i }) {
     return (
         <>
