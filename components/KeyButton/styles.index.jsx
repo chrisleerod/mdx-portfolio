@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Container = styled(motion.Button)`
+export const Container = styled(motion.button)`
     display: flex;
     align-items: center;
 
