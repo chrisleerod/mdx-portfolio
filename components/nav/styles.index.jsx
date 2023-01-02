@@ -9,9 +9,9 @@ export const Container = styled.div`
     max-width: 640px;
     width: 100%;
     border-radius: 64px;
-    background-color: rgba(19, 20, 21, 0.6);
+    background-color: rgba(19, 20, 21, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(24px);
+    backdrop-filter: blur(16px) brightness(100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
