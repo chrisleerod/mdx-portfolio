@@ -34,7 +34,7 @@ export default function ProjectCard({ projects }) {
                                 backgroundColor: "#181A1C"
                             }}
                             whileHover={{
-                                background: "radial-gradient(50% 100% at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)", 
+                                background: "radial-gradient(50% 100% at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)",
                                 backgroundColor: "#181A1C"
                             }}
                             transition={{
@@ -43,14 +43,13 @@ export default function ProjectCard({ projects }) {
                             }}
                         >
                             <TextContainer>
-                                <Timeline>{project.frontmatter.timeline}</Timeline>
                                 <Title>{project.frontmatter.title}</Title>
                             </TextContainer>
-                                <Tag>{project.frontmatter.tags}</Tag>
+                            <Timeline>{project.frontmatter.timeline}</Timeline>
                         </ CardContainer>
                     </Border>
                 </Link>
-                ))}
+            ))}
         </>
     )
 }

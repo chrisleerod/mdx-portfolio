@@ -1,6 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import KeyButton from '../keyButton';
 import { NavLinks } from './data/paths'
+import { useRouter } from 'next/router';
 
 import {
     Container,
@@ -10,23 +12,32 @@ import {
 } from './styles.index'
 
 export default function Nav({ }) {
+
+    const router = useRouter();
+    const currentRoute = router.pathname;
+
     return (
         <Container>
             <Image
                 src='/images/logo.svg'
                 width={31}
                 height={10}
+                alt="clr"
             />
             <NavItems>
                 {NavLinks.map((link, i) => {
                     return (
-                        <NavItem href={link.path}>
-                            <li key={i}>{link.name}</li>
-                        </NavItem>
+                        <li>
+                            <Link href={link.path}>
+                                <a className={currentRoute === link.path ? 'active' : 'default'}>
+                                    {link.name}
+                                </a>
+                            </Link>
+                        </li>
                     );
                 })}
                 <Separator />
-                <KeyButton 
+                <KeyButton
                     kbd="/"
                     label="Contact Links"
                 />

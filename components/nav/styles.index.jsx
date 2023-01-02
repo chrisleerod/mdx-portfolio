@@ -29,10 +29,31 @@ export const NavItems = styled.ul`
         margin-left: 32px;
         font-weight: 400;
     }
+
+    & a {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    & a:visted {
+        text-decoration: none;
+    }
+    & a.default {
+        transition: all 0.3s ease;
+        font-weight: 400;
+        color: #85858E;
+    }
+    & a.default:hover {
+        transition: all 0.3s ease;
+        color: #CBCBD8;
+    }
+    & a.active {
+        opacity: 1;
+        font-weight: 500;
+    }
 `
 export const NavItem = styled(Link)`
     font-size: 16px;
-    color: white;
 `
 
 export const Separator = styled.div`

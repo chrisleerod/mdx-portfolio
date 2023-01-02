@@ -28,13 +28,12 @@ export const TextContainer = styled.div`
 `
 
 export const Title = styled.h1`
+    font-weight: 500;
     font-size: 16px;
 `
 
 export const Timeline = styled.p`
-    width: 128px;
     font-size: 14px;
-    margin-right: 16px;
     color: #CBCBD8;
     font-weight: 500;
 `
