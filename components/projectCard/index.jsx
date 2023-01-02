@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
     Border,
     CardContainer,
-    TextContainer,
     Title,
     Timeline
 } from './index.styles'
@@ -40,9 +39,7 @@ export default function ProjectCard({ project, i }) {
                             ease: [0.34, 1.56, 0.64, 1]
                         }}
                     >
-                        <TextContainer>
-                            <Title>{project.frontmatter.title}</Title>
-                        </TextContainer>
+                        <Title>{project.frontmatter.title}</Title>
                         <Timeline>{project.frontmatter.timeline}</Timeline>
                     </ CardContainer>
                 </Border>

@@ -5,9 +5,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { projectsFileNames, projectsPath, blogsFileNames, blogsPath } from '../lib';
-import BlogCard from '../components/BlogCard';
 import Nav from '../components/nav';
-import Homepage from '../layouts/Home'
+import Homepage from '../layouts/Homepage'
 
 export default function Home({ projects, blogs }) {
   console.log(projects)

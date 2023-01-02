@@ -22,11 +22,6 @@ export const CardContainer = styled(motion.div)`
     background-color: #141617;
 `
 
-export const TextContainer = styled.div`
-    display: flex;
-    align-items: center;
-`
-
 export const Title = styled.h1`
     font-weight: 500;
     font-size: 16px;
