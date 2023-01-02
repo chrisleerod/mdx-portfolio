@@ -1,5 +1,5 @@
 import Divider from '../../components/Divider'
-import WorkGrid from '../../components/ProjectGrid'
+import ProjectGrid from '../../components/ProjectGrid'
 import BlogGrid from '../../components/BlogGrid'
 
 import {
@@ -38,7 +38,7 @@ export default function Homepage({ projects, blogs }) {
             </IntroContainer>
             <Divider />
             <BodyContainer>
-                <WorkGrid projects={projects} />
+                <ProjectGrid projects={projects} />
                 <BlogGrid blogs={blogs} />
             </BodyContainer>
             <Divider />
