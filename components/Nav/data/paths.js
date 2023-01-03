@@ -8,5 +8,9 @@ export const NavLinks = [
     {
         name: 'Writing',
         path: '/writing'
+    },
+    {
+        name: 'Easel',
+        path: '/easel'
     }
 ]
