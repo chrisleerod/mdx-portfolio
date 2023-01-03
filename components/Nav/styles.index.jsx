@@ -20,6 +20,7 @@ export const Container = styled.div`
 export const NavItems = styled.ul`
     display: flex;
     align-items: center;
+    padding: 0px;
 
     & li {
         cursor: pointer;
