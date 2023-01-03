@@ -39,7 +39,7 @@ export default function Homepage({ projects, blogs }) {
             <Divider />
             <BodyContainer>
                 <ProjectGrid projects={projects} />
-                <BlogGrid blogs={blogs} />
+                <BlogGrid title='Selected writing' blogs={blogs} />
             </BodyContainer>
             <Divider />
         </Container>

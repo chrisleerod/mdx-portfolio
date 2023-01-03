@@ -49,7 +49,7 @@ export const NavItems = styled.ul`
     }
     & a.active {
         opacity: 1;
-        font-weight: 500;
+        font-weight: 400;
     }
 `
 export const NavItem = styled(Link)`
