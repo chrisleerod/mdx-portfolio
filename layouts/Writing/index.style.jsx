@@ -14,7 +14,7 @@ export const Header = styled.div`
 
 export const Title = styled.h1`
     font-size: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 `
 
 export const Description = styled.p`
