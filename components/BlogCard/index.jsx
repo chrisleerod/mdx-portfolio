@@ -12,7 +12,7 @@ import {
 export default function BlogCard({ blog, i }) {
     return (
         <>
-                <Link key={i} href={`/blogs/${blog.slug}`}>
+                <Link key={i} href={`/writing/${blog.slug}`}>
                     <Border
                         initial={{
                             background: "linear-gradient(rgba(255, 255, 255, 0.2) -500%, rgba(255, 255, 255, 0))",
