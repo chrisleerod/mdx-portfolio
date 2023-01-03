@@ -16,7 +16,7 @@ export const CardContainer = styled(motion.div)`
     height: 80px;
     position: relative;
     cursor: pointer;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
     align-items: center;
     padding: 0px 16px;
     background-color: #141617;
@@ -55,5 +55,5 @@ export const Footer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 7px 7px;
 `
