@@ -34,16 +34,28 @@ export const Key = styled.span`
 
 export const OrbContainer = styled(motion.div)`
     position: absolute;
-    top: 0%;
+    top: -10%;
     left: 20%;
     transform: translate(-50%, -50%);
 `
 
+export const KeyBG = styled.div`
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    z-index: 20;
+    background-color: #1B1D1F;
+    border-radius: 4px;
+`
+
 export const Orb = styled(motion.div)`
+    z-index: 0;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    filter: blur(10px);
+    filter: blur(6px);
 `
 
 export const Label = styled.span`

@@ -5,6 +5,7 @@ import {
     Key,
     Orb,
     OrbContainer,
+    KeyBG,
     Label,
     KeyContainer
 } from './styles.index'
@@ -31,12 +32,13 @@ export default function KeyButton({ kbd, label }) {
                 <Key>
                     {kbd}
                 </Key>
+                <KeyBG />
                 <OrbContainer
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 2, repeat: Infinity, repeatType: "Loop" }}
+                    transition={{ duration: 2, ease: "linear", repeat: Infinity }}
                 >
                     <Orb variants={OrbOpacity} style={{ backgroundColor: '#FF5C00' }} />
-                    <Orb variants={OrbOpacity} style={{ backgroundColor: '#FF006B' }} />
+                    <Orb variants={OrbOpacity} style={{ backgroundColor: '#FF5C00' }} />
                 </OrbContainer>
             </KeyContainer>
             <Label>

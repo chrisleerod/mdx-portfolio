@@ -18,12 +18,14 @@ export default function Nav({ }) {
 
     return (
         <Container>
-            <Image
-                src='/images/logo.svg'
-                width={31}
-                height={10}
-                alt="clr"
-            />
+            <Link href='/'>
+                <Image
+                    src='/images/logo.svg'
+                    width={31}
+                    height={10}
+                    alt="clr"
+                />
+            </Link>
             <NavItems>
                 {NavLinks.map((link, i) => {
                     return (
