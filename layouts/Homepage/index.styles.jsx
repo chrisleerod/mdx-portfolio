@@ -22,7 +22,7 @@ export const NameContainer = styled.div`
     margin-bottom: 32px;
 `
 
-export const Name = styled.span`
+export const Name = styled.h1`
     font-size: 16px;
     font-weight: 500;
 `
