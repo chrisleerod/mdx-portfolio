@@ -49,7 +49,7 @@ export default function BlogCard({ blog, i }) {
                     whileHover="hover"
                     transition="hover"
                 >
-                    <CardContainer key={blog.frontmatter.slug}
+                    <CardContainer
                         variants={flashLight}
                     >
                         <TextContainer>

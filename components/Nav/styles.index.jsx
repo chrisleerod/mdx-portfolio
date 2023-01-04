@@ -31,24 +31,24 @@ export const NavItems = styled.ul`
         font-weight: 400;
     }
 
-    & a {
+    & span {
         transition: all 0.3s ease;
         cursor: pointer;
         text-decoration: none;
     }
-    & a:visted {
+    & span:visted {
         text-decoration: none;
     }
-    & a.default {
+    & span.default {
         transition: all 0.3s ease;
         font-weight: 400;
         color: #85858E;
     }
-    & a.default:hover {
+    & span.default:hover {
         transition: all 0.3s ease;
         color: #CBCBD8;
     }
-    & a.active {
+    & span.active {
         opacity: 1;
         font-weight: 400;
     }

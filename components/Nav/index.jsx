@@ -31,9 +31,9 @@ export default function Nav({ }) {
                     return (
                         <li key={i}>
                             <Link href={link.path}>
-                                <a className={currentRoute === link.path ? 'active' : 'default'}>
+                                <span className={currentRoute === link.path ? 'active' : 'default'}>
                                     {link.name}
-                                </a>
+                                </span>
                             </Link>
                         </li>
                     );
