@@ -13,12 +13,12 @@ export const CardContainer = styled(motion.div)`
     overflow: hidden;
     display: flex;
     align-items: center;
-    height: 80px;
+    min-height: 80px;
     position: relative;
     cursor: pointer;
     border-radius: 7px 7px 0px 0px;
     align-items: center;
-    padding: 0px 16px;
+    padding: 16px;
     background-color: #141617;
 `
 
@@ -36,11 +36,11 @@ export const Title = styled.h1`
 `
 
 export const Description = styled.p`
-    max-width: 300px;
+    max-width: ${props => props.noWrap ? "100%" : "280px"};
     font-size: 14px;
     color: #CBCBD8;
     font-weight: 400;
-    white-space: nowrap;
+    white-space:  ${props => props.noWrap ? "unset" : "nowrap"};
     overflow: hidden;
     text-overflow: ellipsis;
 `

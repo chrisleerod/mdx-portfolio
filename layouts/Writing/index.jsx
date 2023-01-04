@@ -19,7 +19,7 @@ export default function WritingLayout({ blogs }) {
                     My digital journal of thoughts, work from others that I admire, collections of things I stumble upon and like – or dislike.
                 </Description>
             </Header>
-            <BlogGrid single blogs={blogs} />
+            <BlogGrid single noWrap blogs={blogs} />
         </Container>
     )
 }

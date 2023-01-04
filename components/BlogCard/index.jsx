@@ -5,6 +5,7 @@ import {
     CardContainer,
     TextContainer,
     Title,
+    DescriptionContainer,
     Description,
     Footer
 } from './index.styles'
@@ -33,13 +34,13 @@ const animateBorder = {
         background: "linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0))",
         boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
         y: -2,
-            transition: {
-        duration: 0.3
-    }
+        transition: {
+            duration: 0.3
+        }
     }
 }
 
-export default function BlogCard({ blog, i }) {
+export default function BlogCard({ blog, i, noWrap }) {
     return (
         <>
             <Link key={i} href={`/writing/${blog.slug}`}>
@@ -50,11 +51,12 @@ export default function BlogCard({ blog, i }) {
                     transition="hover"
                 >
                     <CardContainer
+                        noWrap={noWrap}
                         variants={flashLight}
                     >
                         <TextContainer>
                             <Title>{blog.frontmatter.title}</Title>
-                            <Description>{blog.frontmatter.description}</Description>
+                            <Description noWrap={noWrap}>{blog.frontmatter.description}</Description>
                         </TextContainer>
                     </ CardContainer>
                     <Footer>
