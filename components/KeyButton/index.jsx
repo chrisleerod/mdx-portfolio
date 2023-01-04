@@ -10,12 +10,12 @@ import {
     KeyContainer
 } from './styles.index'
 
-const OrbOpacity = {
+const orbOpacity = {
     rest: {
         opacity: 0
     },
     hover: {
-        opacity: 1
+        opacity: 0.6
     }
 }
 
@@ -26,7 +26,7 @@ export default function KeyButton({ kbd, label }) {
         <Container
             initial="rest"
             whileHover="hover"
-            animate="reset"
+            animate="rest"
         >
             <KeyContainer>
                 <Key>
@@ -37,8 +37,8 @@ export default function KeyButton({ kbd, label }) {
                     animate={{ rotate: 360 }}
                     transition={{ duration: 2, ease: "linear", repeat: Infinity }}
                 >
-                    <Orb variants={OrbOpacity} style={{ backgroundColor: '#FF5C00' }} />
-                    <Orb variants={OrbOpacity} style={{ backgroundColor: '#FF5C00' }} />
+                    <Orb variants={orbOpacity} style={{ backgroundColor: 'white' }} />
+                    <Orb variants={orbOpacity} style={{ backgroundColor: 'white' }} />
                 </OrbContainer>
             </KeyContainer>
             <Label>

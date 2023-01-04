@@ -41,7 +41,7 @@ export default function Nav({ }) {
                 <Separator />
                 <KeyButton
                     kbd="/"
-                    label="Contact"
+                    label="Links"
                 />
             </NavItems>
         </Container>

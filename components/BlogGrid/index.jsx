@@ -7,9 +7,9 @@ import {
     Title
 } from './index.styles'
 
-export default function WorkGrid({ blogs, single, title }) {
+export default function WorkGrid({ blogs, single, title, ...props }) {
     return (
-        <Container>
+        <Container {...props}>
             {title &&
                 <Header>
 

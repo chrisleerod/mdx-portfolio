@@ -9,7 +9,9 @@ export const Border = styled(motion.div)`
 `;
 
 export const CardContainer = styled(motion.div)`
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     max-width: 800px;
     width: 100%;
@@ -17,7 +19,6 @@ export const CardContainer = styled(motion.div)`
     position: relative;
     cursor: pointer;
     border-radius: 7px;
-    align-items: center;
     padding: 0px 16px;
     background-color: #141617;
 `

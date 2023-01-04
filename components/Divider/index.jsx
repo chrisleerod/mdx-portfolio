@@ -2,8 +2,8 @@ import {
     Container
 } from './index.styles'
 
-export default function Divider({}) {
-    return(
-        <Container />
+export default function Divider({ ...props }) {
+    return (
+        <Container {...props} />
     )
 }
