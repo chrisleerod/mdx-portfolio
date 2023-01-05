@@ -36,11 +36,9 @@ export const Title = styled.h1`
 `
 
 export const Description = styled.p`
-    max-width: ${props => props.noWrap ? "100%" : "280px"};
     font-size: 14px;
     color: #CBCBD8;
     font-weight: 400;
-    white-space:  ${props => props.noWrap ? "unset" : "nowrap"};
     overflow: hidden;
     text-overflow: ellipsis;
 `
