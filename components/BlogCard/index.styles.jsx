@@ -30,17 +30,12 @@ export const Title = styled.h1`
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 `
 
 export const Description = styled.p`
     font-size: 14px;
     color: #CBCBD8;
     font-weight: 400;
-    overflow: hidden;
-    text-overflow: ellipsis;
 `
 export const Footer = styled.div`
     font-size: 14px;
