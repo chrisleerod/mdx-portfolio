@@ -7,7 +7,7 @@ import {
     Title
 } from './index.styles'
 
-export default function WorkGrid({ blogs, single, noWrap, title, ...props }) {
+export default function WorkGrid({ children, single, title, ...props }) {
     return (
         <Container {...props}>
             {title &&
@@ -20,9 +20,7 @@ export default function WorkGrid({ blogs, single, noWrap, title, ...props }) {
                 </Header>
             }
             <Grid single={single}>
-                {blogs.slice(0, 2).map((blog, i) => (
-                    <BlogCard noWrap={noWrap} blog={blog} key={i} blogs={blogs} />
-                ))}
+                {children}
             </Grid>
         </Container>
     )

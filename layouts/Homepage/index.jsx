@@ -1,3 +1,4 @@
+import BlogCard from '../../components/BlogCard'
 import Divider from '../../components/Divider'
 import ProjectGrid from '../../components/ProjectGrid'
 import BlogGrid from '../../components/BlogGrid'
@@ -44,7 +45,7 @@ const fadeIn = {
     }
 }
 
-export default function Homepage({ projects, blogs }) {
+export default function Homepage({ projects, noWrap, blogs }) {
     return (
         <Container
             variants={containerVariants}
@@ -84,7 +85,11 @@ export default function Homepage({ projects, blogs }) {
                 />
                 <BlogGrid title='Selected writing' blogs={blogs}
                     variants={fadeIn}
-                />
+                >
+                    {blogs.slice(0, 2).map((blog, i) => (
+                        <BlogCard noWrap={noWrap} blog={blog} key={i} blogs={blogs} />
+                    ))}
+                </BlogGrid>
             </BodyContainer>
             <Divider
                 variants={fadeIn}

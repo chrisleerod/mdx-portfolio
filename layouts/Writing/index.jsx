@@ -1,4 +1,5 @@
 import BlogGrid from '../../components/BlogGrid'
+import BlogCard from '../../components/BlogCard'
 
 import {
     Container,
@@ -8,7 +9,7 @@ import {
     Grid
 } from './index.style'
 
-export default function WritingLayout({ blogs }) {
+export default function WritingLayout({ blogs, noWrap }) {
     return (
         <Container>
             <Header>
@@ -19,7 +20,11 @@ export default function WritingLayout({ blogs }) {
                     My digital journal of thoughts, work from others that I admire, collections of things I stumble upon and like – or dislike.
                 </Description>
             </Header>
-            <BlogGrid single noWrap blogs={blogs} />
+            <BlogGrid single noWrap blogs={blogs} >
+            {blogs.map((blog, i) => (
+                    <BlogCard noWrap={noWrap} blog={blog} key={i} blogs={blogs} />
+                ))}
+            </BlogGrid>
         </Container>
     )
 }
