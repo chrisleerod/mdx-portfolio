@@ -16,7 +16,8 @@ export const Header2 = styled.h2`
 export const Paragraph = styled.p`
     font-size: 16px;
     color: #CBCBD8;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    line-height: 200%;
 `
 
 export const Subtext = styled.p`

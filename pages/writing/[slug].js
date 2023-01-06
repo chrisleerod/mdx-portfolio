@@ -4,16 +4,13 @@ import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize'
 import { blogsFileNames, blogsPath } from '../../lib';
 import Post from '../../layouts/Post';
-import { MDXRemote } from 'next-mdx-remote';
 
 export default function Writing(props) {
   console.log(props)
 
   // TODO
   return (
-    <>
-      <Post {...props} />
-    </>
+    <Post {...props} />
   )
 }
 
