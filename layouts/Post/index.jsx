@@ -5,10 +5,11 @@ import {
     Container
 } from './index.styles'
 
-export default function Post({ frontmatter }) {
+export default function Post({ frontmatter, source }) {
     return (
         <Container>
             <BlogHeader frontmatter={frontmatter} />
+            <MDXRemote {...source} />
         </Container>
     )
 }
