@@ -31,7 +31,7 @@ export default function BlogHeader({ frontmatter }) {
                     {frontmatter.title}
                 </Title>
                 <Date>
-                    {frontmatter.postDate}
+                    {frontmatter.date}
                 </Date>
             </HeaderContainer>
         </>
