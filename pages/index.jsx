@@ -5,7 +5,6 @@ import { projectsFileNames, projectsPath, blogsFileNames, blogsPath } from '../l
 import HomeLayout from '../layouts/Homepage'
 
 export default function Home({ projects, blogs }) {
-  console.log(projects)
   return (
     <HomeLayout
       projects={projects}
