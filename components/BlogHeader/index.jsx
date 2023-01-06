@@ -3,8 +3,10 @@ import Image from 'next/image'
 import {
     BackCol,
     HeaderContainer,
+    TitleDate,
     Title,
     Date,
+    Description,
     BackButton
 } from './index.styles'
 
@@ -26,12 +28,17 @@ export default function BlogHeader({ frontmatter }) {
                 </BackButton>
             </BackCol>
             <HeaderContainer>
-                <Title>
-                    {frontmatter.title}
-                </Title>
-                <Date>
-                    {frontmatter.date}
-                </Date>
+                <TitleDate>
+                    <Title>
+                        {frontmatter.title}
+                    </Title>
+                    <Date>
+                        {frontmatter.date}
+                    </Date>
+                </TitleDate>
+                <Description>
+                    {frontmatter.description}
+                </Description>
             </HeaderContainer>
         </>
     )

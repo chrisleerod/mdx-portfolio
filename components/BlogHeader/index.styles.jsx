@@ -38,8 +38,12 @@ export const HeaderContainer = styled.div`
     margin-bottom: 64px;
 `
 
+export const TitleDate = styled.div`
+    margin-bottom: 16px;
+`
+
 export const Title = styled.h1`
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     font-size: 16px;
     font-weight: 600;
 `
@@ -47,4 +51,9 @@ export const Title = styled.h1`
 export const Date = styled.p`
     font-size: 14px;
     color: #85858E;
+`
+
+export const Description = styled.p`
+    font-size: 16px;
+    color: white;
 `
