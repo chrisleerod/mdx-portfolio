@@ -2,12 +2,18 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { blogsFileNames, blogsPath } from '../../lib';
+import Post from '../../layouts/Post';
 
 export default function Writing(props) {
   console.log(props)
 
   // TODO
-  return <>{JSON.stringify(props)}</>
+  return (
+    <>
+      {JSON.stringify(props)}
+      <Post {...props} />
+    </>
+  )
 }
 
 export async function getStaticProps({ params }) {
@@ -19,7 +25,7 @@ export async function getStaticProps({ params }) {
       slug: slug.replace(/\.mdx?$/, ''),
     };
   });
-  
+
   const blog = blogs.find(b => b.slug === params.slug)
   // TODO: Add some error handling here?
 

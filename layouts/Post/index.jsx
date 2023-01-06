@@ -1,23 +1,14 @@
+import { MDXRemote } from 'next-mdx-remote'
+import BlogHeader from '../../components/BlogHeader'
+
 import {
-    Container,
-    HeaderContainer,
-    TitleDate,
-    Title,
-    Date
+    Container
 } from './index.styles'
 
-export default function Post({ children }) {
+export default function Post({ frontmatter }) {
     return (
         <Container>
-            <HeaderContainer>
-                <TitleDate>
-                    <Title>
-                    </Title>
-                    <Date>
-                    </Date>
-                </TitleDate>
-            </HeaderContainer>
-            {children}
+            <BlogHeader frontmatter={frontmatter} />
         </Container>
     )
 }
