@@ -13,7 +13,7 @@ export const BackCol = styled.div`
     position: sticky;
     top: 160px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1024px) {
         height: 32px;
         display: flex;
         align-items: center;
