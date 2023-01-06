@@ -58,7 +58,7 @@ export default function BlogCard({ blog, i }) {
                         </TextContainer>
                     </ CardContainer>
                     <Footer>
-                        <span>{blog.frontmatter.postDate}</span>
+                        <span>{blog.frontmatter.date}</span>
                         <span>{blog.frontmatter.type}</span>
                     </Footer>
                 </Border>
