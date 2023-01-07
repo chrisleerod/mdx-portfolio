@@ -23,15 +23,15 @@ export const CardContainer = styled(motion.div)`
     background-color: #141617;
 `
 
-export const Title = styled.h1`
+export const Title = styled.p`
     font-weight: 500;
     font-size: 16px;
 `
 
 export const Timeline = styled.p`
     font-size: 14px;
-    color: #CBCBD8;
-    font-weight: 500;
+    color: #85858E;
+    font-weight: 400;
 `
 export const Tag = styled.p`
     font-size: 14px;

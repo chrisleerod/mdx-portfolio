@@ -18,10 +18,10 @@ export const Title = styled.p`
     font-weight: 500;
     color: white;
     font-size: 14px;
-    margin-bottom: 4px;
 `
 
 export const Description = styled.p`
     color: #85858E;
     font-size: 14px;
+    line-height: 150%;
 `

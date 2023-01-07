@@ -27,7 +27,7 @@ export const TextContainer = styled.div`
     overflow: hidden;
 `
 
-export const Title = styled.h1`
+export const Title = styled.p`
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 8px;
