@@ -17,7 +17,6 @@ export const CardContainer = styled(motion.div)`
     position: relative;
     cursor: pointer;
     border-radius: 7px 7px 0px 0px;
-    align-items: center;
     padding: 16px;
     background-color: #141617;
 `
