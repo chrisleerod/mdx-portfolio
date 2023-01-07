@@ -56,5 +56,5 @@ export const Date = styled.p`
 export const Description = styled.p`
     font-size: 16px;
     color: white;
-    line-height: 200%;
+    line-height: 150%;
 `
