@@ -5,8 +5,7 @@ import {
     Container,
     Header,
     Title,
-    Description,
-    Grid
+    Description
 } from './index.style'
 
 export default function WritingLayout({ blogs, noWrap }) {
