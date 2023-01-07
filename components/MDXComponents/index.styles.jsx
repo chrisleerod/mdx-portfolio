@@ -17,7 +17,7 @@ export const Paragraph = styled.p`
     font-size: 16px;
     color: #CBCBD8;
     margin-bottom: 24px;
-    line-height: 200%;
+    line-height: 150%;
 `
 
 export const Subtext = styled.p`
