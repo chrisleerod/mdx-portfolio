@@ -2,17 +2,19 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const Border = styled(motion.div)`
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
     border-radius: 8px;
     padding: 1px;
     cursor: pointer;
 `;
 
 export const CardContainer = styled(motion.div)`
-    width: 100%;
+    flex: 1;
     overflow: hidden;
     display: flex;
-    align-items: center;
     min-height: 80px;
     position: relative;
     cursor: pointer;

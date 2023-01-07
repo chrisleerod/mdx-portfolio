@@ -83,7 +83,7 @@ export default function Homepage({ projects, noWrap, blogs }) {
                 <ProjectGrid projects={projects}
                     variants={fadeIn}
                 />
-                <BlogGrid title='Selected writing' blogs={blogs}
+                <BlogGrid title='Selected writing'
                     variants={fadeIn}
                 >
                     {blogs.slice(0, 2).map((blog, i) => (

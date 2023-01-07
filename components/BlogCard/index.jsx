@@ -42,7 +42,7 @@ const animateBorder = {
 export default function BlogCard({ blog, i }) {
     return (
         <>
-            <Link key={i} href={`/writing/${blog.slug}`}>
+            <Link style={{ display: 'flex', flexGrow: 1, width: '100%' }} key={i} href={`/writing/${blog.slug}`}>
                 <Border
                     variants={animateBorder}
                     initial="rest"

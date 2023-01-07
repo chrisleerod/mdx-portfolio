@@ -18,8 +18,7 @@ export const Title = styled.h1`
 `
 
 export const Grid = styled.div`
-    display: grid;
-    grid-template-columns: ${props => props.single ? "1fr" : "1fr 1fr"};
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: ${props => props.single ? "column" : "row"};
     gap: 16px;
 `

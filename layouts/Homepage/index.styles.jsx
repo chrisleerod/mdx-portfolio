@@ -44,6 +44,10 @@ export const Time = styled.span`
     font-weight: 500;
 `
 
+export const BlogsContainer = styled(motion.div)`
+
+`
+
 export const IntroParagraph = styled(motion.p)`
     font-size: 16px;
     font-weight: 400;
