@@ -1,4 +1,4 @@
-import BlogBox from './BlogBox'
+import Box from './Box'
 import ListItem from './ListItem'
 
 import {
@@ -11,7 +11,7 @@ const MDXComponents = {
     h1: (props) => <Header1 {...props} />,
     h2: (props) => <Header2 {...props} />,
     p: (props) => <Paragraph {...props} />,
-    BlogBox: (props) => <BlogBox {...props} />,
+    Box: (props) => <Box {...props} />,
     ListItem: (props) => <ListItem {...props}/>,
 }
 

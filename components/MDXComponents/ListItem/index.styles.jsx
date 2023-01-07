@@ -15,12 +15,13 @@ export const TextContainer = styled.div`
 `
 
 export const Title = styled.p`
+    font-weight: 500;
     color: white;
     font-size: 14px;
     margin-bottom: 4px;
 `
 
 export const Description = styled.p`
-    color: #CBCBD8;
+    color: #85858E;
     font-size: 14px;
 `

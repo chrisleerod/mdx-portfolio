@@ -21,4 +21,8 @@ export const Grid = styled.div`
     display: flex;
     flex-direction: ${props => props.single ? "column" : "row"};
     gap: 16px;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
 `
