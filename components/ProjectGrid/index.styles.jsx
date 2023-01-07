@@ -21,5 +21,5 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 8px;
+    gap: 16px;
 `
