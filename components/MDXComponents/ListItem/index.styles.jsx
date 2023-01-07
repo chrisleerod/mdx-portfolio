@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 export const Container = styled(motion.a)`
     padding: 16px;
-    height: 96px;
     display: flex;
     width: 100%;
     align-items: center;
@@ -11,7 +10,7 @@ export const Container = styled(motion.a)`
 `
 
 export const TextContainer = styled.div`
-    margin-left: 32px;
+    margin-left: 16px;
 `
 
 export const Title = styled.p`

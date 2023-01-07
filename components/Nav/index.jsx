@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 import {
     Container,
     NavItems,
-    NavItem,
     Separator
 } from './styles.index'
 

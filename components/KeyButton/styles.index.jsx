@@ -19,13 +19,14 @@ export const KeyContainer = styled(motion.div)`
     color: #CBCBD8;
     width: 24px;
     height: 24px;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 12px;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
 `
 export const Key = styled.span`
     z-index: 999;
@@ -33,9 +34,6 @@ export const Key = styled.span`
 
 export const OrbContainer = styled(motion.div)`
     position: absolute;
-    top: -10%;
-    left: 20%;
-    transform: translate(-50%, -50%);
 `
 
 export const KeyBG = styled(motion.div)`
@@ -54,9 +52,9 @@ export const Orb = styled(motion.div)`
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    filter: blur(6px);
+    filter: blur(4px);
 `
 
-export const Label = styled.span`
+export const Label = styled(motion.span)`
     font-weight: 400;
 `

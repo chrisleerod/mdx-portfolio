@@ -36,9 +36,6 @@ export const NavItems = styled.ul`
         cursor: pointer;
         text-decoration: none;
     }
-    & span:visted {
-        text-decoration: none;
-    }
     & span.default {
         transition: all 0.3s ease;
         font-weight: 400;
@@ -46,7 +43,7 @@ export const NavItems = styled.ul`
     }
     & span.default:hover {
         transition: all 0.3s ease;
-        color: #CBCBD8;
+        color: white;
     }
     & span.active {
         opacity: 1;

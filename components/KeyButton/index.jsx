@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 import {
     Container,
     Key,
@@ -15,18 +13,28 @@ const orbOpacity = {
         opacity: 0
     },
     hover: {
-        opacity: 0.6
+        opacity: 0
+    }
+}
+
+const labelHover = {
+    rest: {
+        color: '#85858E'
+    },
+    hover: {
+        color: 'white'
     }
 }
 
 
-export default function KeyButton({ kbd, label }) {
+export default function KeyButton({ kbd, label, onClick }) {
 
     return (
         <Container
             initial="rest"
             whileHover="hover"
             animate="rest"
+            onClick={onClick}
         >
             <KeyContainer>
                 <Key>
@@ -41,7 +49,7 @@ export default function KeyButton({ kbd, label }) {
                     <Orb variants={orbOpacity} style={{ backgroundColor: 'white' }} />
                 </OrbContainer>
             </KeyContainer>
-            <Label>
+            <Label variants={labelHover}>
                 {label}
             </Label>
         </Container >
