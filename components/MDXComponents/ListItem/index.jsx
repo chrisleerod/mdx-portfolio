@@ -15,8 +15,8 @@ export default function ListItem({ href, pic, alt, title, description }) {
             <Image
                 src={`/images/${pic}`}
                 alt={alt}
-                width='32'
-                height='32'
+                width='40'
+                height='40'
                 style={{ borderRadius: 32 }}
             />
             <TextContainer>

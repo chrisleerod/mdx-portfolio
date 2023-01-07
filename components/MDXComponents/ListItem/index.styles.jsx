@@ -16,7 +16,7 @@ export const TextContainer = styled.div`
 
 export const Title = styled.p`
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 4px;
 `
 
