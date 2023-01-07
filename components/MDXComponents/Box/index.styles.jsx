@@ -10,4 +10,5 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin: 32px 0px;
+    padding: 32px;
 `

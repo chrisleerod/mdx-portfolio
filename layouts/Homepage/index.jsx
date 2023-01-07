@@ -101,7 +101,7 @@ export default function Homepage({ projects, noWrap, blogs }) {
                     <span>Learning as I go.</span>
                     <br />
                     <br />
-                    Very special thank you to these folks who helped inspire this site with great design. Developed with Next.js, deployed with Vercel, and designed over many late nights in Figma.
+                    Developed with Next.js, deployed with Vercel, and designed over many late nights in Figma.
                 </OutroParagraph>
             </FooterContainer>
         </Container>

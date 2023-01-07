@@ -20,7 +20,7 @@ export default function BlogHeader({ frontmatter }) {
                         src='/images/icons/arrow-corner.svg'
                         width={14}
                         height={14}
-                        alt="clr"
+                        alt='back arrow'
                     />
                     <span>
                         Writing
