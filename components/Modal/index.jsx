@@ -8,17 +8,20 @@ import {
     Header,
     Close
 } from './index.styles'
+import KeyButton from '../KeyButton';
 
 const variants = {
     hidden: {
         scale: 0.99,
         y: 5,
+        boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)",
         opacity: 0
     },
     visible: {
         scale: 1,
         y: 0,
         opacity: 1,
+        boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
         transition: {
             duration: 0.2,
             type: 'ease-in-out'
@@ -34,13 +37,14 @@ const variants = {
     },
 };
 
-const Modal = ({ maxwidth, title, children, handleClose }) => {
-    
+const Modal = ({ maxWidth, title, children, handleClose }) => {
+
     return (
         <Backdrop onClick={handleClose}>
             <ModalContainer
-                maxwidth={maxwidth}
+                maxwidth={maxWidth}
                 onClick={(e) => e.stopPropagation()}
+                style={{ backdropFilter: 'blur(20px)' }}
                 variants={variants}
                 initial="hidden"
                 animate="visible"
@@ -48,8 +52,12 @@ const Modal = ({ maxwidth, title, children, handleClose }) => {
             >
                 <Header>
                     <span>{title}</span>
-                    <Close onClick={handleClose}>
-                        <Image 
+                    <Close onClick={handleClose}
+                        initial={{ backgroundColor: 'rgba(255, 255, 255, 0)', opacity: 0.4 }}
+                        whileHover={{ backgroundColor: 'rgba(255,255,255,0.05)', opacity: 1 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        <Image
                             src='/images/icons/cross.svg'
                             width={16}
                             height={16}

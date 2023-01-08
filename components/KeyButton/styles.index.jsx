@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-export const Container = styled(motion.button)`
+export const Container = styled(motion.a)`
     display: flex;
     align-items: center;
-
     background: none;
 	color: inherit;
 	border: none;

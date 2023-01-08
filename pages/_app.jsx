@@ -23,21 +23,21 @@ function MyApp({ Component, pageProps }) {
   return (
     <MDXProvider components={MDXComponents}>
       <div className='container'>
+        <AnimatePresence
+          initial={false}
+        >
+          {modalOpen && <Modal
+            title='Links'
+            maxWidth='420px'
+            modalOpen={modalOpen}
+            handleClose={() => (setModalOpen(prev => !prev))}
+          />}
+        </AnimatePresence>
         <Nav
           onClick={() => (setModalOpen(prev => !prev))}
         />
         <Component {...pageProps} />
       </div>
-      <AnimatePresence
-        initial={false}
-      >
-        {modalOpen && <Modal
-          title='Links'
-          maxwidth='420px'
-          modalOpen={modalOpen}
-          handleClose={() => (setModalOpen(prev => !prev))}
-        />}
-      </AnimatePresence>
     </MDXProvider>
   )
 }
