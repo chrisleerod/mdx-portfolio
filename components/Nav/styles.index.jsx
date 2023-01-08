@@ -16,6 +16,11 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0px 32px;
+
+    @media (max-width: 720px) {
+        width: calc((100%) - 40px);
+        max-width: unset;
+    }
 `
 export const NavItems = styled.ul`
     display: flex;

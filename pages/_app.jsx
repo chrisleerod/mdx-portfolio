@@ -17,6 +17,9 @@ function MyApp({ Component, pageProps }) {
   const handleKeyDown = e => {
     if (e.key === '/') {
       setModalOpen(prev => !prev)
+    } 
+    else if (e.key === 'Escape') {
+      setModalOpen(false)
     }
   }
 
