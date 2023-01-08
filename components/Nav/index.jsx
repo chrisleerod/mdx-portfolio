@@ -10,7 +10,7 @@ import {
     Separator
 } from './styles.index'
 
-export default function Nav({ }) {
+export default function Nav({ onClick }) {
 
     const router = useRouter();
     const currentRoute = router.pathname;
@@ -41,6 +41,7 @@ export default function Nav({ }) {
                 <KeyButton
                     kbd="/"
                     label="Links"
+                    onClick={onClick}
                 />
             </NavItems>
         </Container>

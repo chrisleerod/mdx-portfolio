@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const Container = styled.div`
     top: 16px;
     position: fixed;
-    z-index: 999;
+    z-index: 99999;
     height: 64px;
     max-width: 640px;
     width: 100%;
