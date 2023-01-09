@@ -13,4 +13,8 @@ export const Container = styled(motion.div)`
     width: 100%;
     background: rgba(0, 0, 0, 0.2);
     transform-origin: center;
+
+    @media (max-width: 420px) {
+        align-items: flex-end;
+    }
 `;

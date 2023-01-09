@@ -9,10 +9,14 @@ export const ModalContainer = styled(motion.div)`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin: 0 16px;
+    margin: 0 20px;
     border-radius: 8px;
     overflow: hidden;
     max-width: ${(props) => props.maxwidth};
+
+    @media (max-width: 420px) {
+        margin: 0px 0px;
+    }
 `;
 
 export const Header = styled.div`
