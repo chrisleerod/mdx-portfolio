@@ -5,6 +5,7 @@ import MDXComponents from '../components/MDXComponents'
 import Nav from '../components/Nav'
 import Modal from '../components/Modal'
 import EmailCopy from '../components/EmailCopy';
+import LinkRow from '../components/LinkRow';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -37,6 +38,7 @@ function MyApp({ Component, pageProps }) {
             handleClose={() => (setModalOpen(prev => !prev))}
           >
             <EmailCopy />
+            <LinkRow />
           </Modal>}
         </AnimatePresence>
         <Nav

@@ -30,6 +30,9 @@ export const Header = styled.div`
 export const ModalBody = styled.div`
     padding: 16px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 `
 
 export const Close = styled(motion.div)`
