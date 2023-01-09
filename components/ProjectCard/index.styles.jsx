@@ -15,7 +15,7 @@ export const CardContainer = styled(motion.div)`
     justify-content: space-between;
     max-width: 800px;
     width: 100%;
-    height: 64px;
+    height: 62px;
     position: relative;
     cursor: pointer;
     border-radius: 7px;

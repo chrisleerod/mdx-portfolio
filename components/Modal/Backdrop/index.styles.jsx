@@ -11,6 +11,6 @@ export const Container = styled(motion.div)`
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
     transform-origin: center;
 `;

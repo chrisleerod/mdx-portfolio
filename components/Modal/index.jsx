@@ -6,7 +6,8 @@ import Backdrop from './Backdrop'
 import {
     ModalContainer,
     Header,
-    Close
+    Close,
+    ModalBody
 } from './index.styles'
 import KeyButton from '../KeyButton';
 
@@ -65,7 +66,9 @@ const Modal = ({ maxWidth, title, children, handleClose }) => {
                         />
                     </Close>
                 </Header>
-                {children}
+                <ModalBody>
+                    {children}
+                </ModalBody>
             </ModalContainer>
         </Backdrop>
     )

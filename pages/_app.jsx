@@ -4,6 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import MDXComponents from '../components/MDXComponents'
 import Nav from '../components/Nav'
 import Modal from '../components/Modal'
+import EmailCopy from '../components/EmailCopy';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   const handleKeyDown = e => {
     if (e.key === '/') {
       setModalOpen(prev => !prev)
-    } 
+    }
     else if (e.key === 'Escape') {
       setModalOpen(false)
     }
@@ -34,7 +35,9 @@ function MyApp({ Component, pageProps }) {
             maxWidth='420px'
             modalOpen={modalOpen}
             handleClose={() => (setModalOpen(prev => !prev))}
-          />}
+          >
+            <EmailCopy />
+          </Modal>}
         </AnimatePresence>
         <Nav
           onClick={() => (setModalOpen(prev => !prev))}
