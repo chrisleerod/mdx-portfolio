@@ -18,7 +18,7 @@ export default function EmailCopy({ }) {
                 transition={{ duration: 0.2 }}
             >
                 <Image
-                    src='images/icons/copy.svg'
+                    src='../images/icons/copy.svg'
                     alt='copy icon'
                     width={16}
                     height={16}
