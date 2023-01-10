@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const Container = styled(motion.div)`
     max-width: 720px;
     margin: 0 auto;
-    padding-top: 144px;
+    padding: 144px 0px 128px 0px;
     width: 100%;
 `
 
@@ -18,7 +18,7 @@ export const BodyContainer = styled(motion.div)`
 `
 
 export const FooterContainer = styled(motion.div)`
-    margin: 64px 0px 128px 0px;
+    margin: 64px 0px 0px 0px;
 `
 
 export const NameContainer = styled(motion.div)`

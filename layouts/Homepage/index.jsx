@@ -87,9 +87,9 @@ export default function Homepage({ projects, noWrap, blogs }) {
                 <BlogGrid title='Recent writing'
                     variants={fadeIn}
                 >
-                    {blogs.slice(0, 2).map((blog, i) => (
-                        <BlogCard noWrap={noWrap} blog={blog} key={i} blogs={blogs} />
-                    ))}
+                    {blogs.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()).slice(0, 2).map((blog, i) => (
+                            <BlogCard noWrap={noWrap} blog={blog} key={i} blogs={blogs} />
+                        ))}
                 </BlogGrid>
             </BodyContainer>
             <Divider

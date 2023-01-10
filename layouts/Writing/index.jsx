@@ -8,7 +8,7 @@ import {
     Description
 } from './index.style'
 
-export default function WritingLayout({ blogs, noWrap }) {
+export default function WritingLayout({ blogs }) {
     return (
         <Container>
             <Header>
@@ -20,7 +20,7 @@ export default function WritingLayout({ blogs, noWrap }) {
                 </Description>
             </Header>
             <BlogGrid single blogs={blogs} >
-            {blogs.map((blog, i) => (
+                {blogs.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()).map((blog, i) => (
                     <BlogCard blog={blog} key={i} blogs={blogs} />
                 ))}
             </BlogGrid>
