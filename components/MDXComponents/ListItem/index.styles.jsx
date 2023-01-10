@@ -7,6 +7,8 @@ export const Container = styled(motion.a)`
     width: 100%;
     align-items: center;
     border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 8px;
 `
 
 export const TextContainer = styled.div`
