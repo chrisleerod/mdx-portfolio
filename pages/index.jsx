@@ -30,6 +30,8 @@ export async function getStaticProps() {
       slug: slug.replace(/\.mdx?$/, ''),
     };
   });
+
+  blogs.sort((a, b) => a.position > b.position ? 1 : -1);
   return {
     props: {
       projects: JSON.parse(JSON.stringify(projects)),

@@ -46,6 +46,7 @@ const fadeIn = {
 }
 
 export default function Homepage({ projects, noWrap, blogs }) {
+
     return (
         <Container
             variants={containerVariants}
