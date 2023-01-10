@@ -19,9 +19,9 @@ export default function WritingLayout({ blogs, noWrap }) {
                     My digital journal of thoughts, work from others that I admire, collections of things I stumble upon and like – or dislike.
                 </Description>
             </Header>
-            <BlogGrid single noWrap blogs={blogs} >
+            <BlogGrid single blogs={blogs} >
             {blogs.map((blog, i) => (
-                    <BlogCard noWrap={noWrap} blog={blog} key={i} blogs={blogs} />
+                    <BlogCard blog={blog} key={i} blogs={blogs} />
                 ))}
             </BlogGrid>
         </Container>
