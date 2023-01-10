@@ -1,12 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { serialize } from 'next-mdx-remote/serialize'
 import { projectsFileNames, projectsPath } from '../../lib';
+import CaseStudy from '../../layouts/CaseStudy';
 
 export default function Project(props) {
-  console.log(props)
   // TODO
-  return <>{JSON.stringify(props)}</>
+  return (
+    <CaseStudy {...props} />
+  )
 }
 
 export async function getStaticProps({ params }) {
@@ -18,23 +21,37 @@ export async function getStaticProps({ params }) {
       slug: slug.replace(/\.mdx?$/, ''),
     };
   });
-  
-  const project = projects.find(p => p.slug === params.slug)
+
+  const postFilePath = path.join(projectsPath, `${params.slug}.mdx`)
+  const source = fs.readFileSync(postFilePath)
+  const { content, data } = matter(source)
+
+  const mdxSource = await serialize(content, {
+    mdxOptions: { development: false },
+    // Optionally pass remark/rehype plugins
+    scope: data,
+  })
+
+  const project = projects.find(b => b.slug === params.slug)
   // TODO: Add some error handling here?
 
   return {
     props: {
+      source: mdxSource,
       ...project
     },
   };
 }
 
-export async function getStaticPaths() {
-  const paths = projectsFileNames.map((slug) => ({
-    params: { slug: slug.replace(/\.mdx?$/, '') },
-  }));
+export const getStaticPaths = async () => {
+  const paths = projectsFileNames
+    // Remove file extensions for page paths
+    .map((path) => path.replace(/\.mdx?$/, ''))
+    // Map the path into the static paths object required by Next.js
+    .map((slug) => ({ params: { slug } }))
+
   return {
     paths,
     fallback: false,
-  };
+  }
 }
