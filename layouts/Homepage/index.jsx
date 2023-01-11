@@ -2,6 +2,7 @@ import BlogCard from '../../components/BlogCard'
 import Divider from '../../components/Divider'
 import ProjectGrid from '../../components/ProjectGrid'
 import BlogGrid from '../../components/BlogGrid'
+import { useScroll, useTransform } from 'framer-motion'
 
 import {
     Container,
@@ -13,7 +14,8 @@ import {
     Time,
     IntroParagraph,
     FooterContainer,
-    OutroParagraph
+    OutroParagraph,
+    FlashLight
 } from './index.styles'
 
 const containerVariants = {
@@ -45,7 +47,24 @@ const fadeIn = {
     }
 }
 
+const animateFlashlight = {
+    rest: {
+        background: 'radial-gradient(200px 25% at 50% -50%, rgba(255, 255, 255, 0.1) 0%, rgba(19, 20, 21, 0) 100%)',
+    },
+    animate: {
+        background: 'radial-gradient(500px 25% at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(19, 20, 21, 0) 100%)',
+        transition: {
+            duration: 1,
+            delay: 0.3
+        }
+    }
+}
+
 export default function Homepage({ projects, noWrap, blogs }) {
+
+    let { scrollYProgress } = useScroll();
+    let y = useTransform(scrollYProgress, [0, 1], ['0%', '-10%'])
+    let o = useTransform(scrollYProgress, [0, .2], ['100%', '0%'])
 
     return (
         <Container
@@ -82,8 +101,8 @@ export default function Homepage({ projects, noWrap, blogs }) {
                     variants={fadeIn}
                 >
                     {blogs.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()).slice(0, 2).map((blog, i) => (
-                            <BlogCard noWrap={noWrap} blog={blog} key={i} blogs={blogs} />
-                        ))}
+                        <BlogCard noWrap={noWrap} blog={blog} key={i} blogs={blogs} />
+                    ))}
                 </BlogGrid>
             </BodyContainer>
             <Divider

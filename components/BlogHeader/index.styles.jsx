@@ -10,8 +10,8 @@ export const BackCol = styled.div`
     max-width: 172px;
     width: 100%;
     margin-left: -172px;
-    position: sticky;
-    top: 160px;
+    position: fixed;
+    top: 208px;
 
     @media (max-width: 1024px) {
         height: 32px;

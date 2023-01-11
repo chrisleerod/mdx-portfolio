@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Container = styled(motion.div)`
+    position: relative;
     max-width: 720px;
     margin: 0 auto;
-    padding: 144px 0px 128px 0px;
+    padding: 208px 0px 128px 0px;
     width: 100%;
 `
 

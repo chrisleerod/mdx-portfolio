@@ -6,6 +6,7 @@ import Nav from '../components/Nav'
 import Modal from '../components/Modal'
 import EmailCopy from '../components/EmailCopy';
 import LinkRow from '../components/LinkRow';
+import PageLight from '../components/PageLight';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <MDXProvider components={MDXComponents}>
+      <PageLight />
       <div className='container'>
         <AnimatePresence
           initial={false}

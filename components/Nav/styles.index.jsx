@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Link from 'next/link';
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     top: 16px;
     position: fixed;
     z-index: 1;
@@ -22,6 +23,15 @@ export const Container = styled.div`
         max-width: unset;
     }
 `
+
+export const Border = styled(motion.div)`
+    position: absolute;
+    height: 1px;
+    top: -1px;
+    left: 0;
+    right: 0;
+`
+
 export const NavItems = styled.ul`
     display: flex;
     align-items: center;
